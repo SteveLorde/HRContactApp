@@ -8,7 +8,8 @@ export class GoToClientAPI {
     gotoClientId : string = process.env.CLIENTID as string;
     gotoAccessToken : string = "";
     gotoRedirectURL : string = process.env.REDIRECTURL as string;
-    gotoAuthURL : string = `https://authentication.logmeininc.com/oauth/authorize?client_id={${this.gotoClientId}&response_type=code&redirect_uri={${this.gotoRedirectURL}`;
+    gotoAuthURL: string = process.env.CLIENTAUTHURL as string;
+    //gotoAuthURL : string = `https://authentication.logmeininc.com/oauth/authorize?client_id={${this.gotoClientId}&response_type=code&redirect_uri={${this.gotoRedirectURL}`;
     gotoMainAPIURL : string = "https://api.goto.com/";
 
     constructor() {
